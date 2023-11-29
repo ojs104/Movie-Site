@@ -1,6 +1,6 @@
 body {
-    background-color: var(--black);
-    color: var(--black);
+    background-color: #0a0a0a;
+    color: var(--white);
 }
 
 .container {
@@ -50,4 +50,17 @@ body {
             opacity: 1;
         }
     }
+}
+// scroll 디자인
+.scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #512121;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background-color: rgba(128, 128, 128, 0.151);
 }

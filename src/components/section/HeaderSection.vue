@@ -12,45 +12,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="header__intro"
-                style="background-image: url(https://image.tmdb.org/t/p/w500/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg);">
-                <div class="container">
-                    <div class="left">
-                        <img src="https://image.tmdb.org/t/p/w500/1YYL1OcgjPLjAGi6n0iZe1gdl9i.jpg" alt="">
-                    </div>
-                    <div class="right">
-                        <h2>엘리멘탈</h2>
-                        <p class="desc">불, 물, 공기, 흙 4개의 원소들이 살고 있는 엘리멘트 시티. 재치 있고 불처럼 열정 넘치는 앰버는 어느 날 우연히 유쾌하고 감성적이며 물 흐르듯
-                            사는 웨이드를 만나 특별한 우정을 쌓으며, 지금껏 믿어온 모든 것들이 흔들리는 새로운 경험을 하게 되는데...</p>
-                        <p class="date">개봉: 2023.06.14</p>
-                        <p class="average">평점: 7.727</p>
-                        <div class="credit">
-                            <ul>
-                                <li>
-                                    <img src="https://image.tmdb.org/t/p/w500/mT4nBq136sHYEJBjeoZzRGBIjxt.jpg"
-                                        alt="Leah Lewis">
-                                </li>
-                                <li>
-                                    <img src="https://image.tmdb.org/t/p/w500/x8tDKAgxMKwaNJSd9RB75EIJnOD.jpg"
-                                        alt="Leah Lewis">
-                                </li>
-                                <li>
-                                    <img src="https://image.tmdb.org/t/p/w500/lDYjEyqojUs2sF3CgdsOZ9vr2KL.jpg"
-                                        alt="Leah Lewis">
-                                </li>
-                                <li>
-                                    <img src="https://image.tmdb.org/t/p/w500/51v6jsvzuAXYirIzdqcjLBp46d6.jpg"
-                                        alt="Leah Lewis">
-                                </li>
-                                <li>
-                                    <img src="https://image.tmdb.org/t/p/w500/lDYjEyqojUs2sF3CgdsOZ9vr2KL.jpg"
-                                        alt="Leah Lewis">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </header>
 </template>
@@ -58,18 +20,25 @@
 <style lang="scss">
 .header__inner {
     .header__bar {
+        margin: 0 30px;
+        height: 100px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        height: 60px;
-        background: #222;
+        align-items: center;
 
         h1 {
-            padding: 15px 25px;
-            font-size: 22px;
-            text-align: center;
-            color: var(--white);
-        }
+    text-align: center;
+    font-family: var(--Title-font);
+    line-height: 0.6;
+    font-size: 3rem;
+
+    em {
+        font-size: 2.5rem;
+        color: rgb(201, 32, 32);
+        letter-spacing: 5px;
+    }
+}
+} // Add this closing brace
 
         nav {
 
@@ -83,20 +52,27 @@
 
                     a {
                         display: inline-block;
-                        color: var(--white);
-                        padding: 0 10px;
+                        padding: 10px 20px;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: var(--black100);
+                        color: antiquewhite;
+                        border-radius: 5px;
                     }
                 }
             }
         }
     }
 
+    }
+
     .header__intro {
-        padding: 30px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
+        padding: 30px;
 
         &::before {
             position: absolute;
@@ -120,47 +96,78 @@
                 width: 350px;
 
                 img {
-                    width: 100%;
-                    vertical-align: top;
+                    // width: 100%;
+                    // vertical-align: top;
+                      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
                 }
             }
 
             .right {
                 width: calc(100% - 390px);
-                background-color: #ffffff1a;
+                padding: 15px 20px;
+            background-color: #00000032;
+            border-radius: 15px;
 
                 h2 {
+margin-top: 10px;
+                margin-bottom: 20px;
+                margin-left: 10px;
+                font-family: var(--mainfont-gmaket);
                     font-size: 30px;
-                    margin-bottom: 10px;
+                    line-height: 1;
+                color: rgb(255 246 167);
+
+                
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+
+            .rating {
+                em {
+                    margin-left: 5px;
+                    font-family: var(--mainfont-nanum);
+                    color: rgb(255 73 73);
+                    font-size: 20px;
+                    font-weight: 900;
+                    line-height: 1;
+                }
                 }
 
                 .desc {
                     margin-bottom: 10px;
                 }
 
-                .date {
-                    display: inline-block;
-                    margin-right: 20px;
-                }
-
-                .average {
-                    display: inline-block;
-                    margin-bottom: 30px;
-                }
-
-                .credit {
+                .credits {
                     display: flex;
+                width: 100%;
+                flex-wrap: wrap;
 
-                    li {
-                        width: 50px;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100px;
+                    margin-right: 15px;
 
-                        img {
-                            width: 100%;
-                        }
+                    .actor {
+                        font-size: 1rem;
+                        text-align: center;
                     }
+                }
+
+                p {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                img {
+                    width: 100px;
+                    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
                 }
             }
         }
     }
+
 }
 </style>

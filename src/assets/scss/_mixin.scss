@@ -7,7 +7,7 @@
 // 한줄 효과
 @mixin line-one {
     overflow: hidden;
-    white-space: noWrap;
+    white-space: nowrap;
     text-overflow: ellipsis;
 }
 
@@ -25,6 +25,27 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: $line;
     -webkit-box-orient: vertical;
+}
+
+// fadeInout
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
