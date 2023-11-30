@@ -1,4 +1,5 @@
 <script setup>
+
 import { onMounted, ref } from 'vue';
 import axios from 'axios';
 
@@ -11,7 +12,7 @@ const searchMovies = async () => {
       params: {
         api_key: 'e08ff74d46031c4340e5e155300c6be8',
         language: 'ko-KR',
-                query: searchQuery.value,
+        query: searchQuery.value,
       }
     });
     movies.value = response.data.results;
@@ -62,58 +63,64 @@ onMounted(async () => {
 
 <template>
   <HeaderSection />
-
-            <div class="header__intro"
-                style="background-image: url(https://image.tmdb.org/t/p/w500/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg);">
-                <div class="container">
-                  <div class="left play__icon">
-                        <img src="https://image.tmdb.org/t/p/w500/1YYL1OcgjPLjAGi6n0iZe1gdl9i.jpg" alt="엘리멘탈">
-                    </div>
-                    <div class="right">
-                        <h2>엘리멘탈</h2>
-                        <p class="desc">불, 물, 공기, 흙 4개의 원소들이 살고 있는 엘리멘트 시티. 재치 있고 불처럼 열정 넘치는 앰버는 어느 날 우연히 유쾌하고 감성적이며 물 흐르듯
-                            사는 웨이드를 만나 특별한 우정을 쌓으며, 지금껏 믿어온 모든 것들이 흔들리는 새로운 경험을 하게 되는데...</p>
-                        <p class="date">개봉: 2023.06.14</p>
-                        <p class="rating">평점: 7.727</p>
-                        <div class="credit">
-                          <p>출연진</p>
+  <div class="header__intro"
+    style="background-image: url(https://image.tmdb.org/t/p/w500/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg);">
+    <div class="container">
+      <div class="left play__icon">
+        <img src="https://image.tmdb.org/t/p/w500/1YYL1OcgjPLjAGi6n0iZe1gdl9i.jpg" alt="엘리멘탈">
+      </div>
+      <div class="right">
+        <h2>엘리멘탈</h2>
+        <p class="desc">불, 물, 공기, 흙 4개의 원소들이 살고 있는 엘리멘트 시티. 재치 있고 불처럼 열정 넘치는 앰버는 어느 날 우연히 유쾌하고 감성적이며 물 흐르듯
+          사는 웨이드를 만나 특별한 우정을 쌓으며, 지금껏 믿어온 모든 것들이 흔들리는 새로운 경험을 하게 되는데...</p>
+        <p class="date">개봉: 2023.06.14</p>
+        <p class="rating">평점: 7.727</p>
+        <div class="credit">
+          <p>출연진</p>
           <div>
-           <img src="https://image.tmdb.org/t/p/w500/liV9OXUeo7T19hhjFlqTELtETnW.jpg" alt="actorimg" style="max-width: 100px;">
-  <p class="actor">Leah Lewis</p>
+            <img src="https://image.tmdb.org/t/p/w500/liV9OXUeo7T19hhjFlqTELtETnW.jpg" alt="actorimg"
+              style="max-width: 100px;">
+            <p class="actor">Leah Lewis</p>
 
           </div>
           <div>
-            <img src="https://image.tmdb.org/t/p/w300/iPx1s7EuBEmty7MXdKSBpEBsGYT.jpg" alt="actorimg" style="max-width: 100px;">
+            <img src="https://image.tmdb.org/t/p/w300/iPx1s7EuBEmty7MXdKSBpEBsGYT.jpg" alt="actorimg"
+              style="max-width: 100px;">
             <p class="actor">Ronnie del Carmen</p>
           </div>
           <div>
-            <img src="https://image.tmdb.org/t/p/w500/i9m2RGrANNxidj0bVKlSs0zHPNX.jpg" alt="actorimg" style="max-width: 100px;">>
+            <img src="https://image.tmdb.org/t/p/w500/i9m2RGrANNxidj0bVKlSs0zHPNX.jpg" alt="actorimg"
+              style="max-width: 100px;">>
             <p class="actor">Shila Ommi</p>
           </div>
           <div>
-            <img src="https://image.tmdb.org/t/p/w500/d8VKC8Ms3u9XiW4e4jsy2grP02d.jpg"  alt="actorimg" style="max-width: 100px;">>
+            <img src="https://image.tmdb.org/t/p/w500/d8VKC8Ms3u9XiW4e4jsy2grP02d.jpg" alt="actorimg"
+              style="max-width: 100px;">>
             <p class="actor">Wendi McLendon-Covey</p>
           </div>
           <div>
-            <img src="https://image.tmdb.org/t/p/w500/gI2RyymLJ9ZrhEyJSD5EqSvFpCX.jpg" alt="actorimg" style="max-width: 100px;">>
+            <img src="https://image.tmdb.org/t/p/w500/gI2RyymLJ9ZrhEyJSD5EqSvFpCX.jpg" alt="actorimg"
+              style="max-width: 100px;">>
             <p class="actor">JCatherine O'Hara</p>
           </div>
           <div>
-            <img src="https://image.tmdb.org/t/p/w500/rhXmrh7dWkCAj23MhGfI79jcbjN.jpg" alt="actorimg" style="max-width: 100px;">>
+            <img src="https://image.tmdb.org/t/p/w500/rhXmrh7dWkCAj23MhGfI79jcbjN.jpg" alt="actorimg"
+              style="max-width: 100px;">>
             <p class="actor">Mason Wertheimer</p>
           </div>
           <div>
-            <img src="https://image.tmdb.org/t/p/w500/uZQu5zBGxE62uGP7qaGhjQ79bn3.jpg" alt="actorimg" style="max-width: 100px;">>
+            <img src="https://image.tmdb.org/t/p/w500/uZQu5zBGxE62uGP7qaGhjQ79bn3.jpg" alt="actorimg"
+              style="max-width: 100px;">>
             <p class="actor">Ronobir Lahiri</p>
           </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          <main id="main" role="main">
+        </div>
+      </div>
+    </div>
+  </div>
+  <main id="main" role="main">
     <div class="container">
       <div class="movie__inner">
-<div class="movie__search">
+        <div class="movie__search">
           <h2 class="blind">검색하기</h2>
           <input tpye="search" v-model="searchQuery" type="search" placeholder="검색어를 입력해주세요!" @keyup.enter="searchMovies">
           <button type="submit" @click="searchMovies">click</button>
@@ -137,6 +144,7 @@ onMounted(async () => {
               <img :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path" :alt="movie.title">
             </a>
           </div>
+
         </section>
         <!-- //movie__cont -->
 
@@ -247,6 +255,6 @@ export default {
   .movie {
     width: 24%;
     margin-bottom: 1.5%;
-      }
+  }
 }
 </style>
